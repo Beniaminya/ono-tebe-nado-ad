@@ -10,6 +10,23 @@ body {
   font-family: Raleway, sans-serif;
 }
 
+.footer__menu-link_active,
+.header__link_active{
+  text-decoration: none;
+}
+
+.card_type_film,
+.card_type_book,
+.card_type_picture {
+  position: relative;
+}
+
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 1;
+}
+
 h1,
 h2,
 h3,
@@ -29,10 +46,24 @@ a {
   color: inherit;
 }
 
+
 img {
   width: 100%;
 }
 
 button {
-  font: inherit;
+  all: unset;
 }
+
+.lots{
+  margin: 180px 24px 0;
+}
+.about{
+  margin: 120px 24px 0;
+}
+
+.footer{
+  margin: 180px 24px 0;
+}
+
+

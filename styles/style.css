@@ -1,1 +1,320 @@
-/* место для вашего кода */
+.header {
+    height: 293px;
+    padding: 0 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 148px 1fr;
+    align-items: center;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+.header__links-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.header__links-list-item::before {
+    content: "○";
+    margin-right: 12px;
+}
+
+.header__logo {
+    width: 148px;
+    height: 105px;
+    flex-shrink: 0;
+}
+
+.address {
+    width: 240px;
+    font-style: normal;
+    line-height: 24px;
+}
+
+.header__address {
+    justify-self: end;
+}
+
+.address a {
+    display: block;
+}
+
+.cover{
+    display: block;
+    min-height: 100vh;
+    position: relative;
+    background-image: url("../images/cover.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.cover__title,
+.cover__description {
+    position: relative;
+    z-index: 1;
+}
+
+h1{
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 100px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.cover__title {
+    width: 100%;
+    margin-top: 105px;
+    margin-bottom: 105px;
+}
+
+.cover__title h1 {
+    width: 100%;
+}
+
+.aligned-text {
+    display: block;
+    width: 100%;
+}
+
+.aligned-text_left {
+    text-align: left;
+}
+
+.aligned-text_center {
+    text-align: center;
+}
+
+.aligned-text_right {
+    text-align: right;
+}
+.cover__description {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    font-style: normal;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.cover__description-text {
+    word-spacing: 18px;
+    white-space: nowrap;
+}
+
+.bet-button{
+    padding: 12px 32px;
+    background: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.lots__heading{
+    margin-left: 40px;
+    margin-bottom: 27px;
+}
+
+.lots__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+}
+
+.lots__card-list-item {
+    flex: 0 0 calc((100% - 50px) / 3);
+    min-width: 0;
+}
+
+.card-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card {
+    display: block;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card_type_film,
+.card_type_book,
+.card_type_picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 596px;
+    padding: 48px 40px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card_type_film{
+    background-image: url("../images/card-lot-01.jpg");
+}
+
+.card_type_book{
+    background-image: url("../images/card-lot-02.jpg");
+}
+
+.card_type_picture{
+    background-image: url("../images/card-lot-03.jpg");
+}
+
+.card__title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.card__text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+.card-link .overlay {
+    transition: background-color 0.2s ease;
+}
+
+.card-link:hover .card,
+.card-link:focus-visible .card {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 25%);
+}
+
+.card-link:hover .overlay,
+.card-link:focus-visible .overlay {
+    background-color: rgb(0 0 0 / 55%);
+}
+
+.card-link:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 4px;
+}
+
+.lots__look-more-link {
+    display: inline-block;
+    margin: 30px 0 30px 40px;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: calc((100% - 50px) / 3) 1fr;
+    column-gap: 25px;
+    min-height: 595px;
+}
+
+.about__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 240px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-top: 35px;
+    margin-left: 47px;
+}
+.about__logo-image {
+    width: 148px;
+    height: auto;
+}
+
+.about__info {
+    display: flex;
+    flex-direction: column;
+    min-height: 595px;
+}
+
+.about__title {
+    align-self: flex-start;
+    margin: 100px 0;
+}
+
+.about__title h2 {
+    line-height: 47px;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.footer{
+    padding: 0 26px;
+    min-height: 180px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer__link {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__social-icon{
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+.footer__menu-list,
+.footer__social-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer__menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer__social-list{
+    display: flex;
+    gap: 48px;
+    justify-self: end;
+    align-self: start;
+}
